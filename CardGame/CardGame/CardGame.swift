@@ -4,29 +4,14 @@ class CardGame {
     
     var deck: [Card] = {
         var temporaryDeck = [Card]()
-        let ranks = [
+        let allRanks = [
             Card.Rank.ace,
-            .two,
-            .three,
-            .four,
-            .five,
-            .six,
-            .seven,
-            .eight,
-            .nine,
-            .ten,
-            .jack,
-            .queen,
-            .king
+            .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten,
+            .jack, .queen, .king
         ]
-        let suits = [
-            Card.Suit.spades,
-            .hearts,
-            .diamonds,
-            .clubs
-        ]
-        for rank in ranks {
-            for suit in suits {
+        let allSuits = [Card.Suit.spades, .hearts, .diamonds, .clubs]
+        for rank in allRanks {
+            for suit in allSuits {
                 temporaryDeck.append(Card(rank: rank, suit: suit))
             }
         }
