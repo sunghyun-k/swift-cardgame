@@ -4,5 +4,4 @@ var cardGameView = CardGameView()
 
 while true {
     cardGameView.startGame()
-    print()
 }

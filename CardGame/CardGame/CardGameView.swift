@@ -6,7 +6,7 @@ struct CardGameView {
     private let options = ["카드 초기화", "카드 섞기", "카드 하나 뽑기"]
     
     func startGame() {
-        let choice = askForChoice(options: options)
+        let choice = InputView.askForChoice(options: options)
         switch choice {
         case 1:
             resetDeck()
@@ -16,7 +16,7 @@ struct CardGameView {
         case 3:
             drawCard()
         default:
-            return
+            print("구현되지 않은 선택지입니다.")
         }
         showDeckCount()
     }
@@ -43,26 +43,5 @@ struct CardGameView {
         print(card)
     }
     
-    private func ask(_ something: String) -> String {
-        print("\(something): ", terminator: "")
-        return readLine() ?? ""
-    }
     
-    private func show(options: [String]) {
-        for index in options.indices {
-            print("\(index + 1). \(options[index])")
-        }
-    }
-    
-    private func askForChoice(options: [String]) -> Int {
-        show(options: options)
-        while true {
-            guard let choice = Int(ask("숫자 선택")),
-                (1...options.count).contains(choice) else {
-                    print("유효하지 않은 선택입니다. 다시 입력하세요.")
-                    continue
-            }
-            return choice
-        }
-    }
 }

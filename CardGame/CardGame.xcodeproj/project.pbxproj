@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		839DA8E51F8CDBCA009E05F3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839DA8E41F8CDBCA009E05F3 /* main.swift */; };
+		F24CFDAA22A0EC63003BBF8C /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24CFDA922A0EC63003BBF8C /* InputView.swift */; };
 		F27D5F3022A0ACF300170602 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27D5F2F22A0ACF300170602 /* Card.swift */; };
 		F27D5F3222A0B4E800170602 /* CardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27D5F3122A0B4E800170602 /* CardGame.swift */; };
 		F27D5F3622A0CA0600170602 /* CardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27D5F3522A0CA0600170602 /* CardGameView.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		839DA8E11F8CDBC9009E05F3 /* CardGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CardGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		839DA8E41F8CDBCA009E05F3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F24CFDA922A0EC63003BBF8C /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		F27D5F2F22A0ACF300170602 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F27D5F3122A0B4E800170602 /* CardGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGame.swift; sourceTree = "<group>"; };
 		F27D5F3522A0CA0600170602 /* CardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				839DA8E41F8CDBCA009E05F3 /* main.swift */,
 				F27D5F3522A0CA0600170602 /* CardGameView.swift */,
+				F24CFDA922A0EC63003BBF8C /* InputView.swift */,
 				F27D5F2F22A0ACF300170602 /* Card.swift */,
 				F27D5F3122A0B4E800170602 /* CardGame.swift */,
 			);
@@ -131,6 +134,7 @@
 			files = (
 				F27D5F3622A0CA0600170602 /* CardGameView.swift in Sources */,
 				839DA8E51F8CDBCA009E05F3 /* main.swift in Sources */,
+				F24CFDAA22A0EC63003BBF8C /* InputView.swift in Sources */,
 				F27D5F3022A0ACF300170602 /* Card.swift in Sources */,
 				F27D5F3222A0B4E800170602 /* CardGame.swift in Sources */,
 			);
