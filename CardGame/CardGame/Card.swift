@@ -10,10 +10,10 @@ struct Card: CustomStringConvertible {
         
         var description: String {
             switch self {
-            case .ace: return "A"
-            case .jack: return "J"
-            case .queen: return "Q"
-            case .king: return "K"
+            case .ace: return "에이스"
+            case .jack: return "잭"
+            case .queen: return "퀸"
+            case .king: return "킹"
             default: return String(self.rawValue)
             }
         }
