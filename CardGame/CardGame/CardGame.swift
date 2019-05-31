@@ -10,8 +10,8 @@ class CardGame {
             .jack, .queen, .king
         ]
         let allSuits = [Card.Suit.spades, .hearts, .diamonds, .clubs]
-        for rank in allRanks {
-            for suit in allSuits {
+        for suit in allSuits {
+            for rank in allRanks {
                 temporaryDeck.append(Card(rank: rank, suit: suit))
             }
         }
@@ -32,11 +32,14 @@ class CardGame {
         deck.shuffle()
     }
     
-    func drawCard() -> Card {
+    func drawCard() -> Card? {
+        guard !deck.isEmpty else {
+            return nil
+        }
         return deck.removeFirst()
     }
     
-    func reset() {
+    func resetDeck() {
         deck = fullDeck
     }
     
