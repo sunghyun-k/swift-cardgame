@@ -10,10 +10,10 @@ struct Card: CustomStringConvertible {
         
         var description: String {
             switch self {
-            case .ace: return "에이스"
-            case .jack: return "잭"
-            case .queen: return "퀸"
-            case .king: return "킹"
+            case .ace: return "A"
+            case .jack: return "J"
+            case .queen: return "Q"
+            case .king: return "K"
             default: return String(self.rawValue)
             }
         }
@@ -25,10 +25,10 @@ struct Card: CustomStringConvertible {
         
         var description: String {
             switch self {
-            case .spades: return "♠ 스페이드"
-            case .hearts: return "♥ 하트"
-            case .diamonds: return "♦ 다이아몬드"
-            case .clubs: return "♣ 클럽"
+            case .spades: return "♠"
+            case .hearts: return "♥"
+            case .diamonds: return "♦"
+            case .clubs: return "♣"
             }
         }
     }
