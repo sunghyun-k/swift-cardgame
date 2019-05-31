@@ -10,15 +10,16 @@ struct CardGameView {
         switch choice {
         case 1:
             resetDeck()
+            showDeckCount()
         case 2:
             shuffleDeck()
-            return
         case 3:
             drawCard()
+            showDeckCount()
         default:
             print("구현되지 않은 선택지입니다.")
         }
-        showDeckCount()
+        print()
     }
     
     private func showDeckCount() {
