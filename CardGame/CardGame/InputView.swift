@@ -1,8 +1,10 @@
 import Foundation
 
 struct InputView {
-    static func show(_ text: String) {
-        print(text)
+    
+    static func ask(_ something: String) -> String {
+        print("\(something): ", terminator: "")
+        return readLine() ?? ""
     }
     
     private static func show(options: [String]) {
@@ -21,10 +23,5 @@ struct InputView {
             }
             return choice
         }
-    }
-    
-    static func ask(_ something: String) -> String {
-        print("\(something): ", terminator: "")
-        return readLine() ?? ""
     }
 }
