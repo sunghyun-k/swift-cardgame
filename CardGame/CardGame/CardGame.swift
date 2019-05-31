@@ -5,8 +5,8 @@ class CardGame {
     private let fullDeck: [Card] = {
         var temporaryDeck = [Card]()
         
-        for suit in Card.Suit.all {
-            for rank in Card.Rank.all {
+        for suit in Card.Suit.allCases {
+            for rank in Card.Rank.allCases {
                 temporaryDeck.append(Card(rank: rank, suit: suit))
             }
         }
