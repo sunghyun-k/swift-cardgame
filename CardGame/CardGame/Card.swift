@@ -25,20 +25,16 @@ struct Card: CustomStringConvertible {
         
         var symbol: String {
             switch self {
-            case .spades:
-                return "♠"
-            case .hearts:
-                return "♥"
-            case .diamonds:
-                return "♦"
-            case .clubs:
-                return "♣"
+            case .spades: return "♠"
+            case .hearts: return "♥"
+            case .diamonds: return "♦"
+            case .clubs: return "♣"
             }
         }
     }
     
-    var rank: Rank
-    var suit: Suit
+    let rank: Rank
+    let suit: Suit
     
     var description: String {
         return "\(suit.symbol) \(rank.description)"
