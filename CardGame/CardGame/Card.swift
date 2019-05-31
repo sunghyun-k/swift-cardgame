@@ -16,6 +16,12 @@ class Card: CustomStringConvertible {
             default: return String(self.rawValue)
             }
         }
+        
+        static var all = [
+            Card.Rank.ace,
+            .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten,
+            .jack, .queen, .king
+        ]
     }
     
     // 무늬의 종류가 4가지로 제한되어 있기 때문에 열거형을 선택함.
@@ -30,6 +36,8 @@ class Card: CustomStringConvertible {
             case .clubs: return "♣"
             }
         }
+        
+        static var all = [Card.Suit.spades, .hearts, .diamonds, .clubs]
     }
     
     let rank: Rank
