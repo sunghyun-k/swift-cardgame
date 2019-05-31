@@ -5,10 +5,14 @@ struct InputView {
         print(text)
     }
     
-    static func askForChoice(options: [String]) -> Int {
+    private static func show(options: [String]) {
         for index in options.indices {
             print("\(index + 1). \(options[index])")
         }
+    }
+    
+    static func askForChoice(options: [String]) -> Int {
+        show(options: options)
         while true {
             guard let choice = Int(ask("숫자 선택")),
                 (1...options.count).contains(choice) else {
@@ -20,7 +24,7 @@ struct InputView {
     }
     
     static func ask(_ something: String) -> String {
-        print(something, terminator: "")
+        print("\(something): ", terminator: "")
         return readLine() ?? ""
     }
 }
