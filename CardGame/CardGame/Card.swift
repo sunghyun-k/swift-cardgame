@@ -1,8 +1,7 @@
 import Foundation
 
-// 인스턴스를 전달 또는 할당할 시에 값이 복사되도록 구조체를 선택함.
-struct Card: CustomStringConvertible {
-    // 카드 숫자는 종류가 13가지로 제한되어 있기 때문에 열거형을 선택함.
+class Card: CustomStringConvertible {
+    // 카드 숫자는 종류가 13가지로 제한되어 있기 때문에 열거형을 선택함. 또한 Card 유형과 연관된 유형이기에 내포되도록 함. RawValue로는 카드 실제 숫자를 나타내는 Int를 가지도록 함.
     enum Rank: Int, CustomStringConvertible {
         case ace = 1
         case two, three, four, five, six, seven, eight, nine, ten
@@ -35,6 +34,11 @@ struct Card: CustomStringConvertible {
     
     let rank: Rank
     let suit: Suit
+    
+    init(rank: Rank, suit: Suit) {
+        self.rank = rank
+        self.suit = suit
+    }
     
     var description: String {
         return "\(suit) \(rank)"
