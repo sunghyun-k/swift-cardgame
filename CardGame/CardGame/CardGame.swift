@@ -2,7 +2,7 @@ import Foundation
 
 class CardGame {
     
-    private var deck: [Card] = {
+    private let fullDeck: [Card] = {
         var temporaryDeck = [Card]()
         let allRanks = [
             Card.Rank.ace,
@@ -18,16 +18,26 @@ class CardGame {
         return temporaryDeck
     }()
     
+    private var deck = [Card]()
+    
+    init() {
+        deck = fullDeck
+    }
+    
     var deckCount: Int {
         return deck.count
     }
     
     func shuffleDeck() {
-        <#function body#>
+        deck.shuffle()
     }
     
     func drawCard() -> Card {
-        <#function body#>
+        return deck.removeFirst()
+    }
+    
+    func reset() {
+        deck = fullDeck
     }
     
 }
