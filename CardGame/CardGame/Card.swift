@@ -3,7 +3,7 @@ import Foundation
 /// 인스턴스를 전달 또는 할당할 시에 값이 복사되도록 구조체를 선택함.
 struct Card: CustomStringConvertible {
     /// 카드 숫자는 종류가 13가지로 제한되어 있기 때문에 열거형을 선택함.
-    enum Rank: Int {
+    enum Rank: Int, CustomStringConvertible {
         case ace = 1
         case two, three, four, five, six, seven, eight, nine, ten
         case jack, queen, king
@@ -20,15 +20,15 @@ struct Card: CustomStringConvertible {
     }
     
     /// 무늬의 종류가 4가지로 제한되어 있기 때문에 열거형을 선택함.
-    enum Suit {
+    enum Suit: CustomStringConvertible {
         case spades, hearts, diamonds, clubs
         
-        var symbol: String {
+        var description: String {
             switch self {
-            case .spades: return "♠"
-            case .hearts: return "♥"
-            case .diamonds: return "♦"
-            case .clubs: return "♣"
+            case .spades: return "♠ 스페이드"
+            case .hearts: return "♥ 하트"
+            case .diamonds: return "♦ 다이아몬드"
+            case .clubs: return "♣ 클럽"
             }
         }
     }
@@ -37,6 +37,6 @@ struct Card: CustomStringConvertible {
     let suit: Suit
     
     var description: String {
-        return "\(suit.symbol) \(rank.description)"
+        return "\(suit) \(rank)"
     }
 }
