@@ -1,7 +1,10 @@
 import Foundation
 
-let aceOfHearts = Card(rank: .ace, suit: .hearts)
-let sevenOfSpades = Card(rank: .seven, suit: .spades)
+var cardGame = CardGame()
 
-print(aceOfHearts)
-print(sevenOfSpades)
+let options = ["카드 초기화", "카드 섞기", "카드 하나 뽑기"]
+
+while true {
+    let choice = InputView.askForChoice(options: options)
+    
+}
