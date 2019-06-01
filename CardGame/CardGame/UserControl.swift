@@ -20,14 +20,23 @@ struct UserControl {
     }
     
     func playCardGame() {
-        let choice = InputView.askForChoice(options: Option.allCases)
-        switch choice {
-        case .drawCard: drawCard()
-        case .resetDeck: resetDeck()
-        case .showOptions: InputView.show(options: Option.allCases)
-        case .shuffleDeck: shuffleDeck()
+        let options = Option.allCases.map { $0.description }
+        InputView.show(options: options)
+        
+        while true {
+            let choosenNumber = InputView.askForChoice(options: options)
+            guard let choice = Option(rawValue: choosenNumber) else {
+                OutputView.show("없는 선택지입니다.")
+                return
+            }
+            switch choice {
+            case .drawCard: drawCard()
+            case .resetDeck: resetDeck()
+            case .showOptions: InputView.show(options: options)
+            case .shuffleDeck: shuffleDeck()
+            }
+            OutputView.nextLine()
         }
-        OutputView.nextLine()
     }
     
     private func showDeckCount() {
@@ -51,5 +60,4 @@ struct UserControl {
         }
         OutputView.show(card: card)
     }
-    
 }
