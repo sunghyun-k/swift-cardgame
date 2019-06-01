@@ -2,7 +2,7 @@ import Foundation
 
 struct UserControl {
     
-    var cardGame = CardGame()
+    private var cardGame = CardGame()
     
     enum Option: Int, CaseIterable, CustomStringConvertible {
         case resetDeck = 1
